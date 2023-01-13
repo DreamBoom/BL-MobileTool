@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.bealead.mobiletool.ui.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_login_to_setting"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="org.bealead.mobiletool.ui.setting.SettingFragment"
+        android:label="SettingFragment" >
+        <action
+            android:id="@+id/action_setting_to_baseUrl"
+            app:destination="@id/baseUrlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseUrlFragment"
+        android:name="org.bealead.mobiletool.ui.setting.BaseUrlFragment"
+        android:label="BaseUrlFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="org.bealead.mobiletool.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+</navigation>

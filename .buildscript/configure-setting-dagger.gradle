@@ -1,0 +1,5 @@
+dependencies {
+    implementation(Deps.daggerHiltAndroid)
+    kapt(Deps.daggerHiltCompiler)
+    kapt(Deps.hiltCompiler)
+}

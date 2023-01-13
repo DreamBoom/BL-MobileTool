@@ -1,0 +1,29 @@
+apply from: rootProject.file('.buildscript/configure-android-defaults.gradle')
+apply from: rootProject.file('.buildscript/configure-setting-dagger.gradle')
+apply from: rootProject.file('.buildscript/configure-setting-room.gradle')
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    defaultConfig {
+        applicationId Build.applicationId
+        versionCode Build.versionCode
+        versionName Build.versionName
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation(project(":common"))
+}

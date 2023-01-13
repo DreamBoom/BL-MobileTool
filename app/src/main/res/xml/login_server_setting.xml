@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="基础设置">
+        <Preference
+            android:key="@string/key_select_base_url"
+            android:title="域名管理"/>
+        <SwitchPreference
+            android:key="@string/key_save_card_no"
+            android:title="是否记录卡号"/>
+    </PreferenceCategory>
+</PreferenceScreen>
